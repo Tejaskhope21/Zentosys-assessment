@@ -157,11 +157,11 @@ OPENWEATHER_API_KEY=your_api_key
 node index.js <city-name>
 📁 Folder: ./weather-cli
 
-
+## 5. 🧩 General Setup Instructions
 
 ```bash
 
-5. 🧩 General Setup Instructions
+
 Make sure you have Node.js (LTS) and MongoDB (local or Atlas) installed.
 
 Clone this repository:
