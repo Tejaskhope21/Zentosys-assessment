@@ -1,68 +1,193 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🚀 Zentosys MERN Stack Internship Challenges
 
-## Available Scripts
+This repository contains solutions for the **Zentosys MERN Stack Internship Primer** challenges. Each challenge is implemented in a separate folder with its own code and documentation. The projects demonstrate proficiency in the **MERN stack (MongoDB, Express.js, React, Node.js)** and related tools and practices.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📚 Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [React Todo App](#1-react-todo-app)
+2. [MongoDB eCommerce Schema](#2-mongodb-ecommerce-schema)
+3. [Express Notes API](#3-express-notes-api)
+4. [Node.js Weather CLI Tool](#4-nodejs-weather-cli-tool)
+5. [General Setup Instructions](#5-general-setup-instructions)
+6. [Notes](#6-notes)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 1. ✅ React Todo App
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Purpose**: Build a task management app with local storage persistence and TailwindCSS styling.
 
-### `npm run build`
+### 🧰 Tech Stack
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React (v18+)
+- TailwindCSS
+- LocalStorage for data persistence
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### 🔧 Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Add, delete, edit, and mark tasks as completed (strike-through)
+- Filter tasks: **All**, **Completed**, **Pending**
+- Responsive design with TailwindCSS
+- **Bonus**: Light/Dark theme toggle
 
-### `npm run eject`
+### ⚙️ Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+# Navigate to project folder
+cd react-todo-app
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Run the app
+npm start
+Open in browser: http://localhost:3000
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+📁 Folder: ./react-todo-app
 
-## Learn More
+2. ✅ MongoDB eCommerce Schema
+Purpose: Design and implement a MongoDB schema for an eCommerce application using Mongoose.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🧰 Tech Stack
+MongoDB
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Mongoose
 
-### Code Splitting
+Node.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+📦 Features
+Schemas for:
 
-### Analyzing the Bundle Size
+User: name, email, password hash, role, cart
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Product: name, price, stock, category, vendorId
 
-### Making a Progressive Web App
+Order: userId, productIds, status, timestamps
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Cart: userId, products (with quantity), total
 
-### Advanced Configuration
+Bonus: API to fetch products by vendorId
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+⚙️ Setup
+cd mongodb-ecommerce
+npm install
+Set up MongoDB Atlas or local MongoDB
 
-### Deployment
+Create .env file with:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+env
+MONGO_URI=your_mongo_uri
 
-### `npm run build` fails to minify
+# Run script
+node index.js
+📁 Folder: ./mongodb-ecommerce
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+3. ✅ Express Notes API
+Purpose: Develop a secure REST API for managing user notes with JWT authentication.
+
+🧰 Tech Stack
+Express.js
+
+MongoDB + Mongoose
+
+JWT
+
+bcrypt
+
+🔐 Features
+User registration & login with JWT auth
+
+CRUD operations for notes (title, content, tags)
+
+Auth middleware to protect routes
+
+Basic validation (e.g. required title)
+
+⚙️ Setup
+
+cd express-notes-api
+npm install
+Create .env file with:
+
+env
+
+MONGO_URI=your_mongo_uri
+JWT_SECRET=your_jwt_secret
+
+Edit
+# Run the server
+npm start
+Test API using Postman or ThunderClient
+
+📁 Folder: ./express-notes-api
+
+4. ✅ Node.js Weather CLI Tool
+Purpose: Create a command-line tool to fetch and display weather data using OpenWeatherMap API.
+
+🧰 Tech Stack
+Node.js
+
+axios
+
+OpenWeatherMap API
+
+🌦️ Features
+Accepts city name from command line
+
+Displays temperature, weather condition, wind speed
+
+Bonus: Cache results in JSON file to avoid duplicate API calls
+
+⚙️ Setup
+
+cd weather-cli
+npm install
+Create .env file with:
+
+env
+
+OPENWEATHER_API_KEY=your_api_key
+
+# Run the tool
+node index.js <city-name>
+📁 Folder: ./weather-cli
+
+5. 🧩 General Setup Instructions
+Make sure you have Node.js (LTS) and MongoDB (local or Atlas) installed.
+
+Clone this repository:
+
+
+git clone https://github.com/Tejaskhope21/Zentosys-assessment.git
+cd zentosys-mern-challenges
+Follow setup instructions in each challenge folder.
+
+Add .env files for each app that requires it (MONGO_URI, JWT_SECRET, OPENWEATHER_API_KEY).
+
+Use VS Code with extensions:
+
+ESLint
+
+Prettier
+
+TailwindCSS IntelliSense
+
+6. 📝 Notes
+All code uses ES6+ syntax and follows clean code practices.
+
+All API-based projects were tested using Postman or ThunderClient.
+
+I'm ready to:
+
+Explain the logic in interviews
+
+Extend features on demand
+
+Debug live if needed
+
+🙋‍♂️ Author
+Name: Tejas Khope
+GitHub: @Tejaskhope21
+Email: tejaskhope600@gmail.com
