@@ -34,7 +34,6 @@ This repository contains solutions for the **Zentosys MERN Stack Internship Prim
 
 ### ⚙️ Setup
 
-```bash
 # Navigate to project folder
 cd react-todo-app
 
@@ -47,17 +46,19 @@ Open in browser: http://localhost:3000
 
 📁 Folder: ./react-todo-app
 
-2. ✅ MongoDB eCommerce Schema
-Purpose: Design and implement a MongoDB schema for an eCommerce application using Mongoose.
 
-🧰 Tech Stack
+
+## 2. ✅ MongoDB eCommerce Schema
+**Purpose**: Design and implement a MongoDB schema for an eCommerce application using Mongoose.
+
+### 🧰 Tech Stack
 MongoDB
 
 Mongoose
 
 Node.js
 
-📦 Features
+### 📦 Features
 Schemas for:
 
 User: name, email, password hash, role, cart
@@ -68,7 +69,7 @@ Order: userId, productIds, status, timestamps
 
 Cart: userId, products (with quantity), total
 
-Bonus: API to fetch products by vendorId
+**Bonus**: API to fetch products by vendorId
 
 ⚙️ Setup
 cd mongodb-ecommerce
@@ -84,10 +85,12 @@ MONGO_URI=your_mongo_uri
 node index.js
 📁 Folder: ./mongodb-ecommerce
 
-3. ✅ Express Notes API
-Purpose: Develop a secure REST API for managing user notes with JWT authentication.
 
-🧰 Tech Stack
+
+## 3. ✅ Express Notes API
+**Purpose**: Develop a secure REST API for managing user notes with JWT authentication.
+
+### 🧰 Tech Stack
 Express.js
 
 MongoDB + Mongoose
@@ -96,7 +99,7 @@ JWT
 
 bcrypt
 
-🔐 Features
+### 🔐 Features
 User registration & login with JWT auth
 
 CRUD operations for notes (title, content, tags)
@@ -116,24 +119,24 @@ env
 MONGO_URI=your_mongo_uri
 JWT_SECRET=your_jwt_secret
 
-Edit
+
 # Run the server
 npm start
 Test API using Postman or ThunderClient
 
 📁 Folder: ./express-notes-api
 
-4. ✅ Node.js Weather CLI Tool
+### 4. ✅ Node.js Weather CLI Tool
 Purpose: Create a command-line tool to fetch and display weather data using OpenWeatherMap API.
 
-🧰 Tech Stack
+### 🧰 Tech Stack
 Node.js
 
 axios
 
 OpenWeatherMap API
 
-🌦️ Features
+### 🌦️ Features
 Accepts city name from command line
 
 Displays temperature, weather condition, wind speed
@@ -153,6 +156,10 @@ OPENWEATHER_API_KEY=your_api_key
 # Run the tool
 node index.js <city-name>
 📁 Folder: ./weather-cli
+
+
+
+```bash
 
 5. 🧩 General Setup Instructions
 Make sure you have Node.js (LTS) and MongoDB (local or Atlas) installed.
