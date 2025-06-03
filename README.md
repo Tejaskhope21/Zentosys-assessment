@@ -34,13 +34,13 @@ This repository contains solutions for the **Zentosys MERN Stack Internship Prim
 
 ### ⚙️ Setup
 
-# Navigate to project folder
+### Navigate to project folder
 cd react-todo-app
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Run the app
+### Run the app
 npm start
 Open in browser: http://localhost:3000
 
@@ -81,7 +81,7 @@ Create .env file with:
 env
 MONGO_URI=your_mongo_uri
 
-# Run script
+## Run script
 node index.js
 📁 Folder: ./mongodb-ecommerce
 
@@ -120,7 +120,7 @@ MONGO_URI=your_mongo_uri
 JWT_SECRET=your_jwt_secret
 
 
-# Run the server
+### Run the server
 npm start
 Test API using Postman or ThunderClient
 
@@ -153,7 +153,7 @@ env
 
 OPENWEATHER_API_KEY=your_api_key
 
-# Run the tool
+##  Run the tool
 node index.js <city-name>
 📁 Folder: ./weather-cli
 
