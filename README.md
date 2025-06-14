@@ -20,17 +20,8 @@ This repository contains solutions for the **Zentosys MERN Stack Internship Prim
 - Styled using TailwindCSS
 
 #### Sample Output:
-```
-✔️ Buy groceries
-✏️ Finish internship project
-✅ Call Mom [Completed with strikethrough]
-```
+![{61ACA5C8-CA42-434C-8E15-FE9D29394709}](https://github.com/user-attachments/assets/e62aa07f-11f8-4cda-804d-c1141a64f98d)
 
-| Filter | Tasks |
-|--------|-------|
-| All    | 3     |
-| Completed | 1  |
-| Pending | 2   |
 
 #### To Run:
 
