@@ -1,200 +1,195 @@
+
 # 🚀 Zentosys MERN Stack Internship Challenges
 
-This repository contains solutions for the **Zentosys MERN Stack Internship Primer** challenges. Each challenge is implemented in a separate folder with its own code and documentation. The projects demonstrate proficiency in the **MERN stack (MongoDB, Express.js, React, Node.js)** and related tools and practices.
+This repository contains solutions for the **Zentosys MERN Stack Internship Primer** challenges. Each project is implemented in its own folder with full code, tools, and documentation. These demonstrate proficiency in the **MERN stack** (MongoDB, Express.js, React, Node.js) and general backend/frontend concepts.
 
 ---
 
-## 📚 Table of Contents
-
-1. [React Todo App](#1-react-todo-app)
-2. [MongoDB eCommerce Schema](#2-mongodb-ecommerce-schema)
-3. [Express Notes API](#3-express-notes-api)
-4. [Node.js Weather CLI Tool](#4-nodejs-weather-cli-tool)
-5. [General Setup Instructions](#5-general-setup-instructions)
-6. [Notes](#6-notes)
+## ✅ Project Overviews
 
 ---
 
-## 1. ✅ React Todo App
+### 1. 📝 Todo App – React + TailwindCSS
 
-**Purpose**: Build a task management app with local storage persistence and TailwindCSS styling.
+**Folder:** `todo-app1/todo-app`
 
-### 🧰 Tech Stack
+#### Features:
+- Add, edit, delete, and mark tasks as completed
+- Filter tasks: All / Completed / Pending
+- Task persistence using `localStorage`
+- Styled using TailwindCSS
 
-- React (v18+)
-- TailwindCSS
-- LocalStorage for data persistence
+#### Sample Output:
+```
+✔️ Buy groceries
+✏️ Finish internship project
+✅ Call Mom [Completed with strikethrough]
+```
 
-### 🔧 Features
+| Filter | Tasks |
+|--------|-------|
+| All    | 3     |
+| Completed | 1  |
+| Pending | 2   |
 
-- Add, delete, edit, and mark tasks as completed (strike-through)
-- Filter tasks: **All**, **Completed**, **Pending**
-- Responsive design with TailwindCSS
-- **Bonus**: Light/Dark theme toggle
-
-### ⚙️ Setup
-
-### Navigate to project folder
-cd react-todo-app
-
-### Install dependencies
-npm install
-
-### Run the app
-npm start
-Open in browser: http://localhost:3000
-
-📁 Folder: ./react-todo-app
-
-
-
-## 2. ✅ MongoDB eCommerce Schema
-**Purpose**: Design and implement a MongoDB schema for an eCommerce application using Mongoose.
-
-### 🧰 Tech Stack
-MongoDB
-
-Mongoose
-
-Node.js
-
-### 📦 Features
-Schemas for:
-
-User: name, email, password hash, role, cart
-
-Product: name, price, stock, category, vendorId
-
-Order: userId, productIds, status, timestamps
-
-Cart: userId, products (with quantity), total
-
-**Bonus**: API to fetch products by vendorId
-
-⚙️ Setup
-cd mongodb-ecommerce
-npm install
-Set up MongoDB Atlas or local MongoDB
-
-Create .env file with:
-
-env
-MONGO_URI=your_mongo_uri
-
-## Run script
-node index.js
-📁 Folder: ./mongodb-ecommerce
-
-
-
-## 3. ✅ Express Notes API
-**Purpose**: Develop a secure REST API for managing user notes with JWT authentication.
-
-### 🧰 Tech Stack
-Express.js
-
-MongoDB + Mongoose
-
-JWT
-
-bcrypt
-
-### 🔐 Features
-User registration & login with JWT auth
-
-CRUD operations for notes (title, content, tags)
-
-Auth middleware to protect routes
-
-Basic validation (e.g. required title)
-
-⚙️ Setup
-
-cd express-notes-api
-npm install
-Create .env file with:
-
-env
-
-MONGO_URI=your_mongo_uri
-JWT_SECRET=your_jwt_secret
-
-
-### Run the server
-npm start
-Test API using Postman or ThunderClient
-
-📁 Folder: ./express-notes-api
-
-### 4. ✅ Node.js Weather CLI Tool
-Purpose: Create a command-line tool to fetch and display weather data using OpenWeatherMap API.
-
-### 🧰 Tech Stack
-Node.js
-
-axios
-
-OpenWeatherMap API
-
-### 🌦️ Features
-Accepts city name from command line
-
-Displays temperature, weather condition, wind speed
-
-Bonus: Cache results in JSON file to avoid duplicate API calls
-
-⚙️ Setup
-
-cd weather-cli
-npm install
-Create .env file with:
-
-env
-
-OPENWEATHER_API_KEY=your_api_key
-
-##  Run the tool
-node index.js <city-name>
-📁 Folder: ./weather-cli
-
-## 5. 🧩 General Setup Instructions
+#### To Run:
 
 ```bash
+cd todo-app1/todo-app
+npm install
+npm start
+```
 
+---
 
-Make sure you have Node.js (LTS) and MongoDB (local or Atlas) installed.
+### 2. 🛒 Ecommerce Backend – MongoDB + Mongoose
 
-Clone this repository:
+**Folder:** `ecommerce-backend`
 
+#### Features:
+- Mongoose schemas for:
+  - Users
+  - Products
+  - Orders
+  - Carts
+- Data relations and validation
+- API to fetch products for a vendor
 
-git clone https://github.com/Tejaskhope21/Zentosys-assessment.git
-cd zentosys-mern-challenges
-Follow setup instructions in each challenge folder.
+#### Sample Output:
+```json
+GET /api/products/vendor/123
 
-Add .env files for each app that requires it (MONGO_URI, JWT_SECRET, OPENWEATHER_API_KEY).
+[
+  {
+    "name": "T-Shirt",
+    "price": 499,
+    "stock": 100,
+    "vendorId": "123"
+  },
+  {
+    "name": "Jeans",
+    "price": 999,
+    "stock": 50,
+    "vendorId": "123"
+  }
+]
+```
 
-Use VS Code with extensions:
+#### To Run:
 
-ESLint
+```bash
+cd ecommerce-backend
+npm install
+npm run dev
+```
 
-Prettier
+> Create a `.env` file:
 
-TailwindCSS IntelliSense
+```
+MONGO_URI=your_mongodb_uri
+```
 
-6. 📝 Notes
-All code uses ES6+ syntax and follows clean code practices.
+---
 
-All API-based projects were tested using Postman or ThunderClient.
+### 3. 🔐 Notes API – Express.js + JWT
 
-I'm ready to:
+**Folder:** `notes-api`
 
-Explain the logic in interviews
+#### Features:
+- Register/Login using JWT
+- CRUD APIs for notes
+- Auth-protected routes
+- Input validation
 
-Extend features on demand
+#### Sample Output:
+```bash
+POST /register
+> 201 Created - User Registered
 
-Debug live if needed
+POST /login
+> 200 OK - Token: eyJhbGciOiJIUzI1...
 
-🙋‍♂️ Author
-Name: Tejas Khope
-GitHub: @Tejaskhope21
-Email: tejaskhope600@gmail.com
+GET /api/notes
+[
+  {
+    "_id": "66a654321",
+    "title": "My First Note",
+    "content": "Learned JWT Auth today!",
+    "tags": ["jwt", "auth"]
+  }
+]
+```
+
+#### To Run:
+
+```bash
+cd notes-api
+npm install
+npm run dev
+```
+
+> Create a `.env` file:
+
+```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+---
+
+### 4. 🌦 Weather CLI – Node.js
+
+**Folder:** `weather-cli`
+
+#### Features:
+- CLI tool to fetch weather using OpenWeatherMap API
+- Displays temperature, condition, and wind speed
+- Optional caching with JSON file
+
+#### Sample Output:
+```bash
+$ node index.js "Nagpur"
+
+🌤 Weather in Nagpur:
+Temperature: 34°C
+Condition: Clear Sky
+Wind Speed: 4.5 m/s
+```
+
+#### To Run:
+
+```bash
+cd weather-cli
+node index.js "City Name"
+```
+
+> Configuration required:
+
+If using `.env`:
+```
+API_KEY=your_openweathermap_api_key
+```
+
+Or if using a `config.json`, structure it like this:
+```json
+{
+  "API_KEY": "your_openweathermap_api_key"
+}
+```
+
+---
+
+## 📚 Topics Covered
+
+- **React.js**: Components, Hooks, TailwindCSS, Routing
+- **MongoDB & Mongoose**: Schema Design, Relations, CRUD
+- **Express.js**: REST APIs, JWT, Middlewares
+- **Node.js**: CLI tools, Core modules, Async Handling
+
+---
+
+## 🙋‍♂️ Author
+
+**Tejas Khope**  
+[GitHub Profile](https://github.com/Tejaskhope21)
+
